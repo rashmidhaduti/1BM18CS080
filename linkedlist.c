@@ -17,6 +17,7 @@ else
 printf("no memory allocation\n");
 exit(0);
 }
+}
 NODE insert_front(NODE head,int item)
 {
 NODE p;
@@ -29,7 +30,7 @@ return head;
 void display(NODE head)
 {
 NODE p;
-if(head++NULL)
+if(head==NULL)
 {
 printf("list is empty\n");
 exit(0);
@@ -44,12 +45,12 @@ p=p->next;
 NODE insert_end(NODE head,int item)
 {
 NODE p,q;
-q=get node();
+q=getnode();
 q->data=item;
 q->next=NULL;
 if(head==NULL)
 {
-retun q;
+return q;
 }
 p=head;
 while(p->next!=NULL)
@@ -60,7 +61,7 @@ return head;
 int main()
 {
 NODE head=NULL;
-int option,ele,value;
+int option,ele;
 while(1)
 {
 printf("1.Insert front \n2.Insert end \n3.display \n4.Exit\n");
@@ -69,11 +70,11 @@ scanf("%d",&option);
 switch(option)
 {
 case 1:printf("enter element to be inserted\n");
-       scanf("%d"&ele);
+       scanf("%d",&ele);
        head=insert_front(head,ele);
        break;
 case 2:printf("enter element to be inserted\n");
-       scanf("%d"&ele);
+       scanf("%d",&ele);
        head=insert_end(head,ele);
        break;
 case 3:printf("elements in list are\n");
